@@ -23,7 +23,7 @@ public class BaseDAO {
             Context envContext = (Context)initContext.lookup("java:comp/env");
             DataSource ds = (DataSource)envContext.lookup("jdbc/" + connectionName);
             if(ds == null) {
-            	Logger.getInstance().log(Level.SEVERE, "Failed to connect to database");
+            	Logger.getInstance().log(Level.SEVERE, "Failed to connect to garden.druid.pool.database");
             	return null;
             }
             else {
